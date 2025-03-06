@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PricePulse - Compare Electronics Prices</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Price<span>Pulse</span> <span class="dot"></span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Products</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Compare prices across <span>all major stores</span></h2>
+                <p>Find the best deals on electronics with our real-time price comparison tool</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search for products...">
+                        <button id="clear-search" class="clear-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                    <button id="search-btn" class="search-btn">Search</button>
+                </div>
+
+                <div class="categories">
+                    <div class="category"><i class="fas fa-mobile-alt"></i> Phones</div>
+                    <div class="category"><i class="fas fa-laptop"></i> Laptops</div>
+                    <div class="category"><i class="fas fa-headphones"></i> Headphones</div>
+                    <div class="category"><i class="fas fa-watch"></i> Smartwatches</div>
+                    <div class="category"><i class="fas fa-tablet"></i> Tablets</div>
+                    <div class="category"><i class="fas fa-volume-up"></i> Speakers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="results">
+        <div class="container">
+            <div id="product-details" class="product-details hidden">
+                <div class="product-title-container">
+                    <h2 id="product-title"></h2>
+                    <div class="best-price">
+                        <span>Best Price:</span>
+                        <div id="best-price-value"></div>
+                        <div id="best-price-at"></div>
+                    </div>
+                </div>
+
+                <div class="comparison-container">
+                    <div class="product-image-container">
+                        <img id="product-image" src="" alt="">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <span id="product-rating">4.8</span>
+                        </div>
+                        <div id="product-description" class="product-description"></div>
+                    </div>
+
+                    <div id="price-comparison" class="price-comparison">
+                        <!-- Price cards will be generated here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="popular-searches" class="popular-searches">
+                <h3>Popular Searches</h3>
+                <div class="popular-products">
+                    <div class="popular-product" data-product="iphone15pro">
+                        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845702708" alt="iPhone 15 Pro">
+                        <h4>iPhone 15 Pro</h4>
+                    </div>
+                    <div class="popular-product" data-product="macbookairm2">
+                        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-midnight-config-20220606?wid=820&hei=498&fmt=jpeg&qlt=90&.v=1654122880566" alt="MacBook Air M2">
+                        <h4>MacBook Air M2</h4>
+                    </div>
+                    <div class="popular-product" data-product="samsungs24ultra">
+                        <img src="https://images.samsung.com/in/smartphones/galaxy-s24-ultra/buy/product_color_titanium_black.png" alt="Samsung S24 Ultra">
+                        <h4>Samsung S24 Ultra</h4>
+                    </div>
+                    <div class="popular-product" data-product="boatheadphones">
+                        <img src="https://www.boat-lifestyle.com/cdn/shop/products/33extra_large_2c7ea3ab-f9c9-4e52-9ea6-91158f5cd149.jpg" alt="boAt Headphones">
+                        <h4>boAt Headphones</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Price<span>Pulse</span></h3>
+                    <p>Compare prices. Save money.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#">Phones</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Headphones</a></li>
+                            <li><a href="#">Tablets</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PricePulse. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/products.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
